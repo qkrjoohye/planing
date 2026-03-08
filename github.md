@@ -1,3 +1,8 @@
+### 주의사항: 모든 컴퓨터 조작에서 한글 사용금지하고 반드시 영어문자를 사용해야 한다. 폴더명, 파일명 등등. 한글 사랑과 별개의 문제로서 피할 수 없는 문제이다. 
+
+### 검색 - powershell - 작업표시줄에 고정 
+
+
 # Git & GitHub 빠른 시작 가이드
 
 ## 1단계: Git 설치 (3분)
@@ -212,11 +217,9 @@ git clone https://github.com/LeeSeogMin/planing.git
 `C:\planing` 폴더가 생성되면 성공입니다.
 
 ### 4단계: 환경 자동 설정
+vscode를 열고 터미널-새터미널 열고 실행
 
-같은 명령 프롬프트에서 이어서 실행:
-
-```bash
-cd C:\planing
+```powershell
 python setup_env.py
 ```
 
@@ -237,8 +240,8 @@ python setup_env.py
 
 ### 6단계: 커널 선택 및 실행
 
-1. 노트북 우측 상단 **"커널 선택"** 클릭
-2. **"Python 환경..."** → **"AI 기획 강의 (Python 3)"** 선택
+1. 노트북 우측 상단 **"커널 선택"** 클릭 후, 확장선택 후, 파이썬 환경 선택
+2. **"Python 환경..."** → **"Python 3"** 선택
 3. 첫 번째 코드 셀부터 순차 실행 (▶)
 
 > 커널 목록에 "AI 기획 강의 (Python 3)"가 안 보이면 4단계(`python setup_env.py`)가 정상 완료되었는지 확인하세요.
@@ -282,3 +285,39 @@ python setup_env.py
 - `simpy` - 이산사건 시뮬레이션
 
 ---
+만일 github copilot 실패햇을때 아래를 사용합니다. 
+
+## Gemini CLI 설치 및 실행
+
+### 1단계: Node.js 설치 확인
+- Gemini CLI는 npm 방식 설치를 권장하므로 Node.js 필수
+- https://nodejs.org 에서 LTS 버전 다운로드 후 설치
+- npm은 Node.js와 함께 자동 설치됨
+
+### 2단계: vscode 에서 새터미널 열기
+- PowerShell 실행
+
+### 3단계: Gemini CLI 설치
+```bash
+npm install -g @google/gemini-cli 
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 
+```
+
+### 4단계: 실행
+```bash
+gemini   
+
+중간에 브라우저에서 구글로 로그인하는 과정을 거치니 브라우저를 잘 살핀다. 
+
+구글로그인 후에 성공했다는 메시지와 함께 r 을 입력하라는 메시지가 나오니 따라서 하면 잠시 후에 로그인된다. 
+
+터미널에서 마우스 우클릭 후 패널위치를 오른쪽으로 한다. 
+```
+
+### 5단계: 인증 설정
+처음 실행 시 다음 중 선택:
+- **Google 계정 로그인** (권장)
+- **Gemini API Key**
+- **Vertex AI**
+
