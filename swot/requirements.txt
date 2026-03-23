@@ -1,0 +1,11 @@
+konlpy
+adjustText
+pandas
+seaborn
+matplotlib
+scikit-learn
+openpyxl
+numpy
+requests
+openai
+python-dotenv
