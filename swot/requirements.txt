@@ -9,3 +9,4 @@ numpy
 requests
 openai
 python-dotenv
+tabulate
